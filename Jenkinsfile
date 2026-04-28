@@ -15,10 +15,7 @@ pipeline {
                 bat 'echo ========================'
                 bat 'echo Running Calculator App'
                 bat 'echo ========================'
-                
-                // Direct execution (guaranteed output)
-                bat 'javac -d . src\\main\\java\\com\\example\\App.java'
-                bat 'java com.example.App'
+                bat 'mvn exec:java -Dexec.mainClass="com.example.App" -q'
             }
         }
     }
