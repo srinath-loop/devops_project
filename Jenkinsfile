@@ -10,7 +10,7 @@ pipeline {
 
         stage('Run') {
             steps {
-                bat 'java -cp target/devops-project-1.0-SNAPSHOT.jar com.example.App'
+                bat 'java -jar target/devops-project-1.0-SNAPSHOT.jar'
             }
         }
     }
