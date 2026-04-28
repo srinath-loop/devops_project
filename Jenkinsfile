@@ -10,7 +10,7 @@ pipeline {
 
         stage('Run') {
             steps {
-                bat 'java -jar target/devops-project-1.0-SNAPSHOT.jar'
+                bat 'mvn exec:java -Dexec.mainClass="com.example.App"'
             }
         }
     }
