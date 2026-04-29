@@ -15,7 +15,12 @@ pipeline {
                 bat 'echo ========================'
                 bat 'echo Running Calculator App'
                 bat 'echo ========================'
-                bat 'mvn exec:java -Dexec.mainClass="com.example.App"'
+                
+                // Run and capture output
+                bat 'mvn exec:java -Dexec.mainClass="com.example.App" > output.txt'
+                
+                // Print output clearly
+                bat 'type output.txt'
             }
         }
     }
